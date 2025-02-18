@@ -1,6 +1,6 @@
 # Deno 2025 프로젝트
 
-![alt text](./images/my-dino.png)
+![Callor Deno](./images/my-dino.png)
 
 Javascript 런타임의 새로운 패러다임을 제시하는 Deno 가 2024년 10월 2.0 버전을 출시했다.
 
