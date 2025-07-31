@@ -52,3 +52,11 @@ Run these commands to get started
   # Run the tests
   deno test
 ```
+
+## Create React/NextJS Project
+
+```shell
+deno run -A npm:create-next-app@latest my-next-app
+cd my-next-app
+deno task dev
+```
