@@ -41,7 +41,7 @@ deno init [project-name]
 
 Run these commands to get started
 
-  cd hello-deno-02
+  cd [project-name]
 
   # Run the program
   deno run main.ts
@@ -56,7 +56,7 @@ Run these commands to get started
 ## Create React/NextJS Project
 
 ```shell
-deno run -A npm:create-next-app@latest my-next-app
-cd my-next-app
+deno run -A npm:create-next-app@latest [project]
+cd [project]
 deno task dev
 ```
