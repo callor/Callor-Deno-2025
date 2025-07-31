@@ -60,3 +60,80 @@ deno run -A npm:create-next-app@latest [project]
 cd [project]
 deno task dev
 ```
+
+## Create fresh Project
+
+Fresh는 Deno에서 가장 널리 사용되는 웹 프레임워크입니다. 기본적으로 클라이언트에 JavaScript를 전송하지 않는 모델을 사용합니다.
+
+```shell
+deno run -A -r https://fresh.deno.dev
+cd [project-name]
+deno task start
+```
+
+## Create Astro Project
+
+Astro는 개발자가 빠르고 가벼운 웹사이트를 만들 수 있는 정적 사이트 생성기입니다.
+
+```shell
+deno run -A npm:create-astro [project-name]
+cd [project-name]
+deno task dev
+```
+
+## Create Vite Project
+
+Vite는 브라우저에서 직접 실행할 수 있는 네이티브 ES 모듈을 통해 코드를 제공하는 웹 개발 빌드 도구입니다. Vite는 Deno를 사용하여 최신 웹 애플리케이션을 구축하는 데 매우 유용한 도구입니다.
+
+```shell
+deno run -A npm:create-vite@latest [project-name]
+cd [project-name]
+deno install
+deno task dev
+```
+
+## Create Lume Project
+
+Lume은 Jekyll이나 Eleventy 등 다른 정적 사이트 생성기에서 영감을 받은 Deno용 정적 사이트 생성기입니다.
+
+```shell
+mkdir [project-name]
+cd [project-name]
+deno run -A https://lume.land/init.ts
+deno task serve
+```
+
+## Create Docusaurus Project
+
+Docusaurus는 기술 문서 웹사이트에 최적화된 정적 사이트 생성기입니다.
+
+- **yarn**, **pnpm**, **bun** 을 먼저 설치해야 한다. 그렇지 않으면 **package-manager** 를 지정해야 한다
+
+```shell
+npm run -g yarn
+```
+
+- 다음 명령으로 **package-manager** 를 지정할 수 있다
+
+```shell
+deno run -A npm:create-docusaurus@latest [project-name] classic
+deno run -A npm:create-docusaurus@latest -p npm [project-name] classic
+deno run -A npm:create-docusaurus@latest -p pnpm [project-name] classic
+deno run -A npm:create-docusaurus@latest -p yarn [project-name] classic
+deno run -A npm:create-docusaurus@latest -p bun [project-name] classic
+```
+
+```shell
+cd [project-name]
+deno task start
+```
+
+## Create Hono Project
+
+Hono는 Express와 Sinatra의 전통을 따르는 가벼운 웹 앱 프레임워크입니다.
+
+```shell
+deno run -A npm:create-hono@latest [project-name]
+cd [project-name]
+deno task start
+```
