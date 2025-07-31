@@ -137,3 +137,39 @@ deno run -A npm:create-hono@latest [project-name]
 cd [project-name]
 deno task start
 ```
+
+## Create Oak Project
+
+Oak는 Deno에서 HTTP를 처리하기 위한 미들웨어 프레임워크입니다. Oak는 프런트엔드 애플리케이션과 잠재적인 데이터베이스 또는 기타 데이터 소스(예: REST API, GraphQL API)를 연결하는 연결 고리 역할을 합니다.
+
+- **server.ts**
+
+```js
+import { Application } from "jsr:@oak/oak/application";
+import { Router } from "jsr:@oak/oak/router";
+
+const router = new Router();
+router.get("/", (ctx) => {
+  ctx.response.body = `<!DOCTYPE html>
+    <html>
+      <head><title>Hello oak!</title><head>
+      <body>
+        <h1>Hello oak!</h1>
+      </body>
+    </html>
+  `;
+});
+
+const app = new Application();
+const port = 8080;
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+console.log(`Server running on http://localhost:${port}`);
+
+app.listen({ port: port });
+```
+
+```shell
+deno run --allow-net server.ts
+```
